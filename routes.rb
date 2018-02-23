@@ -11,6 +11,15 @@ class Ideas < Sinatra::Base
     @app = App.find(params[:id])
     erb :edit
   end
+  
+  post "/apps2" do
+    App2.create(title: params[:title], description: params[:description])
+    redirect "/"
+  end
+  get "/apps2" do
+    @apps2 = App2.all
+    erb :apps2
+  end
 
   delete "/apps/:id" do
     App.find(params[:id]).destroy

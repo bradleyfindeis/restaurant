@@ -7,6 +7,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
 require './models/app'
+require './models/app2'
 require_relative 'routes'
 
 class Ideas < Sinatra::Base
